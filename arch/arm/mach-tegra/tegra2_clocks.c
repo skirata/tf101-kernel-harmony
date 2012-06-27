@@ -2826,8 +2826,8 @@ struct tegra_cpufreq_table_data *tegra_cpufreq_table_get(void)
 unsigned long tegra_emc_to_cpu_ratio(unsigned long cpu_rate)
 {
 	/* Vote on memory bus frequency based on cpu frequency */
-	if (cpu_rate > 1000000)         /* Max bus rate if overclocked */
-		return 700000000;
+	if (cpu_rate > 1000000000)         /* Max bus rate if overclocked */
+		return 760000000;
         else if (cpu_rate >= 816000)
 		return 600000000;	/* cpu 816 MHz, emc max */
 	else if (cpu_rate >= 608000)
